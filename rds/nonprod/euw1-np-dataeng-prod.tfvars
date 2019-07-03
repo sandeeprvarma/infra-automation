@@ -1,0 +1,11 @@
+#dc = ""
+environment = "Prod"
+
+identifier = "production-db"
+name = "production"
+instance_class = "db.m4.10xlarge"
+storage = "400"
+backup_retention_period = "20"
+backup_window = "03:38-04:08"
+iops = "4000"
+maintenance_window = "thu:04:58-thu:05:28"
