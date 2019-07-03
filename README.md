@@ -5,6 +5,9 @@
 - This script also creates loadbalancers and map a domain name to the endpoint.
 - EC2 template file contains the userdata code to setup the required tools on the instance.
 - tfvars files contains the run time variable which nedds to be passed during terraform execution
+
+
+
 File structure:
 
 ec2
@@ -17,6 +20,7 @@ ec2
   - main.tf
   - output.tf
   - variables.tf
+  
 s3
   - nonprod
     zone_name-vpc-instance_name.tfvars (e.g. euw1-np-vpc-server1.tfvars: contans non production variables)
@@ -25,6 +29,7 @@ s3
   - main.tf
   - output.tf
   - variables.tf
+  
 rds
   - nonprod
     zone_name-vpc-instance_name.tfvars (e.g. euw1-np-vpc-server1.tfvars: contans non production variables)
