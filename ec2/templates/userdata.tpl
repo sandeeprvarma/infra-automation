@@ -24,20 +24,3 @@ sudo apt-add-repository ppa:ansible/ansible
 sudo apt-get update
 sudo apt-get install ansible -y
 echo "Ansible Installed on" >> terraform_progress.txt
-
-echo "creating and moving to epgs-setup folder" >> terraform_progress.txt
-mkdir epgs-setup
-cd epgs-setup
-
-sudo git clone -b ${brach_name} ${git_repo_url} epgs
-cd epgs
-
-echo "Ansible Git-Repo ${brach_name} branch fetched on" >> terraform_progress.txt
-echo "Provided permission to the user" >> terraform_progress.txt
-sudo chown -R ubuntu:ubuntu .
-
-echo "Ansible started" >> terraform_progress.txt
-sudo ansible-playbook -c local ansible/${provision_file} --inventory-file=ansible/inventory/${inventory} --limit="${host_name}" --extra-vars "run_without_cron=1" >> terraform_progress.txt
-echo "Completed ansible setup" >> terraform_progress.txt
-
-echo "All done" >> terraform_progress.txt
