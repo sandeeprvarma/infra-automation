@@ -66,4 +66,5 @@ terraform plan --var-file=nonprod/usw2-np-testserver.tfvars
 ```
 terraform apply --var-file=nonprod/usw2-np-testserver.tfvars 
 ```
-similarly, we can create S3 and RDS.
+
+Similarly, we can create S3 and RDS.
