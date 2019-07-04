@@ -1,8 +1,3 @@
-#dc                = "" #optional if you have datacenters
-environment       = "Dev"
-serviceid         = "nprod-testserver"
-inst_name         = "Test Server"
+environment       = "Production"
+inst_name         = "Live Server"
 inst_type         = "t2.micro"
-#root_volume_size  = "20"  #make it default
-
-
