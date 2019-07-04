@@ -38,3 +38,32 @@ rds
   - main.tf
   - output.tf
   - variables.tf
+
+
+SETUP:
+
+1. Install Terraform and AWS cli and run 'aws configure' command to seup aws account. 
+```
+aws configure
+AWS Access Key ID [None]: ACCESS_KEY
+AWS Secret Access Key [None]: ACCESS_SECRET_KEY
+Default region name [None]: REGION
+Default output format [None]: json
+```
+
+2. after configuring aws account use the below code to initialize terraform for EC2
+
+```
+terraform init --var-file=nonprod/usw2-np-testserver.tfvars 
+```
+
+3. Now we can use terraform plan to check what will happen we apply these changes. It will not crete any resourse.
+```
+terraform plan --var-file=nonprod/usw2-np-testserver.tfvars 
+```
+
+4. Run terrafor apply to create the aws instances
+```
+terraform apply --var-file=nonprod/usw2-np-testserver.tfvars 
+```
+
