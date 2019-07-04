@@ -40,7 +40,7 @@ rds
   - variables.tf
 
 
-SETUP:
+SETUP: (nonprod)
 
 1. Install Terraform and AWS cli and run 'aws configure' command to seup aws account. 
 ```
@@ -66,4 +66,4 @@ terraform plan --var-file=nonprod/usw2-np-testserver.tfvars
 ```
 terraform apply --var-file=nonprod/usw2-np-testserver.tfvars 
 ```
-
+similarly, we can create S3 and RDS.
