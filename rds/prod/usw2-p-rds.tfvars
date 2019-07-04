@@ -1,0 +1,8 @@
+identifier = "production-db"
+name = "development"
+instance_class = "db.t2.micro"
+storage = "20"
+backup_retention_period = "20"
+backup_window = ""
+maintenance_window = "thu:04:58-thu:05:28"
+password = "test"
